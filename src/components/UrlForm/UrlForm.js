@@ -15,6 +15,11 @@ class UrlForm extends Component {
   }
 
   handleSubmit = e => {
+    const urlObj = {
+      ...this.state
+    }
+    this.props.createShortUrl(urlObj)
+    console.log(urlObj)
     e.preventDefault();
     this.clearInputs();
   }
